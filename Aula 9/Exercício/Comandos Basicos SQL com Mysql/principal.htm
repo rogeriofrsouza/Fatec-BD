@@ -1,0 +1,136 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="pt-br">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>Comandos B&aacute;sicos SQL com BD Mysql</title>
+</head>
+
+<body>
+
+<p align="center" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: center">
+<b><span style="font-size: 18pt; color: maroon">Curso a Distancia - &quot;Comandos B&aacute;sicos SQL com  BD MySQL&quot;</span></b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-bottom:0">
+<b><span style="font-size: 13.5pt; color: black">Este curso foi criado pelo<span class="apple-converted-space">&nbsp;</span><u>Professor</u><span class="apple-converted-space">&nbsp;</span></span><span style="font-size: 13.5pt; color: red">Lu&iacute;s Paulo Fagiolo Augusto </span><span style="font-size: 13.5pt; color: black">e 
+disponibilizado, na Internet, em<span class="apple-converted-space">&nbsp;</span></span><span class="apple-converted-space"><font color="#800000">julho</font></span><span style="font-size: 13.5pt; color: maroon"><span class="Apple-converted-space">&nbsp;</span>de 
+201</span><font color="#800000" size="4">6</font><span style="font-size: 13.5pt; color: black">, 
+pela<span class="apple-converted-space">&nbsp;</span></span><span style="font-size: 13.5pt; color: maroon">CETEC/CPS</span><span style="font-size: 13.5pt; color: black">.&nbsp;</span></b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-bottom:0">
+  <b><span style="font-size: 13.5pt; color: black">O curso ensina<span class="Apple-converted-space">&nbsp;</span></span>a 
+    criação e a 
+    manipulação de tabelas no banco de dados MySQL. 
+Dúvidas entre em</b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: 700; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-top:0">
+contato no e-mail: <a href="mailto:luispaulosj@gmail.com"> luispaulosj@gmail.com</a> ou <a href="mailto:fjc.consultoria@ig.com.br">
+ogiorgi@hotmail.com.</a></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-bottom:5px">
+<b><span style="font-size: 13.5pt; color: black">Para participar do curso é 
+necessário que tenha instalado em seu computador o BD Mysql vers&atilde;o 5 ou superior</span></b><b><span style="font-size: 13.5pt; color: black">. Você poderá conseguir</span></b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-top:0; margin-bottom:0">
+<b>o<span style="font-size: 13.5pt; color: black"> software gratuitamente 
+através da internet. Veremos nas aulas como fazer o download e instalar</span></b> <b>o<span style="font-size: 13.5pt; color: black">s aplicativos.<br>
+</span><u><span style="font-size: 13.5pt; color: maroon"><br>
+Público Alvo</span></u><span style="font-size: 13.5pt; color: black">: 
+professores e funcionários do CPS.</span></b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+  <b><u><span style="font-size: 13.5pt; color: maroon">Objetivo</span></u><span style="font-size: 13.5pt; color: black">:&nbsp;Aprender os conceitos b&aacute;sicos da Linguagem SQL com BD Mysql</span></b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+<b><span style="font-size: 13.5pt; color: maroon">Duração</span><span style="font-size: 13.5pt; color: black">: 
+40<span class="Apple-converted-space">&nbsp;</span><span class="apple-converted-space">&nbsp;</span>horas.</span></b></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+<b><span style="font-size: 13.5pt; color: maroon">Certificação</span><span style="font-size: 13.5pt; color: black">: 
+o certificado só será emitido após o participante ter enviado, o trabalho 
+solicitado no item atividade, para a CETEC, aos cuidados do Prof. Oswaldo e 
+enviar também o questionário informativo, devidamente preenchido, recebido no 
+momento da inscrição, para o seguinte e-mail:<span class="apple-converted-space">&nbsp;</span><a href="mailto:ogiorgi@hotmail.com">ogiorgi@hotmail.com</a><span class="apple-converted-space">&nbsp;</span>.</span></b></p>
+<p align="justify" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+<font size="4"><b><font color="#800000">Pré-Requisitos</font></b></font><strong>:</strong><span class="Apple-converted-space">&nbsp;</span>&nbsp;</p>
+<p align="justify" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-bottom:0">
+<strong><font size="4">É desejável que o aluno tenha os seguintes conhecimentos: 
+Modelagem de Banco de Dados e No&ccedil;&otilde;es de Inform&aacute;tica<br>
+Caso você não tenha um destes requisitos, sugerimos que realize&nbsp; algum curso, 
+disponibilizado pela<span class="Apple-converted-space">&nbsp;</span><font color="#FF0000">CETEC,</font><span class="Apple-converted-space">&nbsp;</span></font></strong></p>
+<p align="justify" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; margin-top:0">
+<strong><font size="4">com a temática de Banco de Dados antes 
+de começar o curso de<span class="Apple-converted-space">&nbsp;</span><font color="#FF0000">&quot;Comandos B&aacute;sicos SQL com DB Mysql&quot;</font>.</font></strong></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">&nbsp;
+</p>
+<p align="center" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: center">
+<b><u><span style="font-size: 13.5pt; color: maroon">IMPORTANTE</span></u><span style="font-size: 13.5pt; color: maroon">:</span></b><span class="apple-converted-space" style="font-size: 13.5pt; color: black">&nbsp;</span><span style="font-size: 13.5pt; color: black">&nbsp;</span></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+<b><span style="font-size: 13.5pt; color: black">Para que sua tarefa seja 
+avaliada e certificada é necessário que você execute todos os passos como 
+propostos no curso, e a seguir envie o seu trabalho concluído para a<span class="apple-converted-space">&nbsp;</span></span><span style="font-size: 13.5pt; color: red">CETEC</span></b><span class="apple-converted-space"><b><span style="font-size: 13.5pt; color: black">&nbsp;</span></b></span><b><span style="font-size: 13.5pt; color: black">aos 
+cuidados do Prof.<span class="apple-converted-space">&nbsp;</span></span><span style="font-size: 13.5pt; color: blue">Oswaldo</span><span style="font-size: 13.5pt; color: black">.</span></b><span style="font-size: 13.5pt; color: black">&nbsp;</span></p>
+<p align="center" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; text-align: center">
+<b><u><span style="font-size: 18pt; color: maroon">Observação:</span></u></b><span style="font-size: 13.5pt; color: black">&nbsp;</span></p>
+<p style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+<b><span style="font-size: 13.5pt; color: black">O curso inicia-se quando você 
+recebe o e-mail com o endereço do provedor que hospeda o curso e não tem prazo 
+para ser concluído. O que determina a data de encerramento é o seu tempo 
+disponível, ou seja, a sua inscrição não caduca.<span class="apple-converted-space">&nbsp;</span></span><span style="font-size: 13.5pt; color: maroon">Para 
+a CETEC o importante é que você conclua o curso.</span><span style="font-size: 13.5pt; color: black">&nbsp;</span></b></p>
+<div align="center" style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+	<table class="MsoNormalTable" border="1" cellspacing="1" cellpadding="0" width="100%" style="width: 1331px">
+		<tr>
+			<td width="13%" style="width: 179px; padding: 0.75pt; background: rgb(255, 204, 153)">
+			<p align="center" style="text-align: center"><b>
+			<span style="font-size: 18pt; color: maroon">Aula</span></b></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt; background: purple">
+			<p align="center" style="text-align: center"><b>
+			<span style="font-size: 18pt; color: rgb(255, 204, 255)">Breve 
+			descrição das aulas</span></b></td>
+		</tr>
+		<tr>
+			<td width="13%" style="width: 179px; padding: 0.75pt">
+			<p class="MsoNormal" align="center" style="text-align: center">
+		  <font size="4"><b>Mysql</b></font></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt">
+			<p class="MsoNormal"><font size="4" color="#800000"><b>Instalação do 
+		  Mysql</b></font></td>
+		</tr>
+		<tr>
+			<td width="13%" style="width: 179px; padding: 0.75pt">
+			<p class="MsoNormal" align="center" style="text-align: center">
+		  <font size="4"><b>N.1</b></font></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt">
+			<p class="MsoNormal"><font size="4" color="#800000"><b>Acesso ao Mysql e Cria&ccedil;&atilde;o da Tabela </b></font></td>
+		</tr>
+		<tr>
+			<td width="13%" style="width: 179px; padding: 0.75pt">
+			<p class="MsoNormal" align="center" style="text-align: center"><b>
+		  <span style="font-size: 13.5pt; color: black">N.2</span></b></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt">
+			<p class="MsoNormal"><font size="4" color="#800000"><b>Comando Insert</b></font></td>
+		</tr>
+		<tr>
+			<td width="13%" align="center" style="width: 179px; padding: 0.75pt"><b><span style="font-size: 13.5pt; color: black">N.</span><font size="4">3</font></b></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt">
+			<p class="MsoNormal"><font size="4" color="#800000"><b>
+			Comandos B&aacute;sicos com Select</b></font></td>
+		</tr>
+		<tr>
+			<td width="13%" align="center" style="width: 179px; padding: 0.75pt">
+			<b><span style="font-size: 13.5pt; color: black">N.</span><font size="4">4</font></b></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt">
+			<p class="MsoNormal"><font size="4" color="#800000"><b>Comandos Update e Delete</b></font></td>
+		</tr>
+		<tr>
+			<td width="13%" align="center" style="width: 179px; padding: 0.75pt">
+			<font size="4"><b>Atividade</b></font></td>
+			<td width="85%" style="width: 1141px; padding: 0.75pt">
+			<font size="4" color="#800000"><b>Atividade proposta para a 
+			certificação</b></font></td>
+		</tr>
+	</table>
+</div>
+<b style="color: rgb(0, 0, 0); font-family: Times New Roman; font-size: medium; font-style: normal; font-variant: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px">
+<u><span style="font-size: 18pt; font-family: Arial Black; color: red">ATENÇÃO:</span></u></b><span class="apple-converted-space" style="color: black; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-size: 13.5pt">&nbsp;</span><span style="color: black; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-size: 13.5pt">Siga 
+os exemplos dos&nbsp; Professores que já criaram um curso de capacitação, na 
+modalidade a distância, e<span class="apple-converted-space">&nbsp;</span>crie um 
+curso sobre qualquer assunto (relacionado com a sua disciplina) que possa 
+interessar aos professores e funcionários do CPS. Submeta-o a nossa apreciação. 
+Uma vez aprovado será disponibilizado na Internet. Qualquer dúvida ou informação 
+entre em contato com<span class="apple-converted-space">&nbsp;</span></span><span style="font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-size: 13.5pt; color: maroon">Prof. 
+Oswaldo</span><span class="apple-converted-space" style="color: black; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-size: 13.5pt">&nbsp;</span><span style="color: black; font-family: Times New Roman; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; font-size: 13.5pt">através 
+do e-mail:<span class="apple-converted-space">&nbsp;</span><a href="mailto:ogiorgi@hotmail.com">ogiorgi@hotmail.com</a></span></body></html>

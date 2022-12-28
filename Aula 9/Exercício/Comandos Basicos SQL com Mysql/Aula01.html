@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Comandos Básicos SQL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">MySQL - básico |</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Página Inicial</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Aula01.html">Aula 1</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Aula02.html">Aula 2</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Aula03.html">Aula 3</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Aula04.html">Aula 4</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Atividade.html">Atividade</a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <p class="fonte">1- Comando inicial para verificar as informações no BD:</p>
+            <p class="fonte"><span class="comandos">DICA 1</span> -  todos os comandos Mysql devem terminar com ponto e vírgula.<br />
+                <span class="comandos">DICA 2</span> - a setinha para cima do teclado repete os últimos comandos digitados. <br />
+            </p>
+            <p>Para listar oa BD de dados existentes devemos utilizar o comando: <span class="comandos">show databases;</span></p>
+            <p><img src="imagens/aula01-01.PNG" width="612" height="319" /></p>
+            <p>- o Mysql cria em sua instalação alguns Bancos de Dados para teste, como exemplo o <span class="cor">test.</span></p>
+            <p class="fonte">2 - Criando e acessando seu próprio BD:</p>
+            <p>- Para criar um BD devemos utilizar o comando <span class="comandos">create database</span></p>
+            <p><strong>Ex:</strong><span class="comandos"> create database aula;</span></p>
+            <p>- Sempre que criamos um BD devemos acessa-lo, para acessarmos um BD devemos utilizar o comando:<span class="comandos"> use</span></p>
+            <p><strong>Ex:</strong> <span class="comandos">use aula;</span></p>
+            <p><img src="imagens/aula01-02.PNG" width="684" height="339" /></p>
+            <p>- Observe atentamente a resposta a cada comando: <span class="comandos">Query Ok</span> - siginifica que o comando foi realziado com sucesso.<br />
+                - No caso do acesso ao BD, o retorno foi <span class="comandos">Database Changed</span>. <br />
+                - Digite novamente o comando <span class="comandos">Show Databases</span> para verificar se o seu BD foi criado corretamente. </p>
+            <p><img src="imagens/aula01-03.PNG" width="686" height="343" /></p>
+            <p>- a partir de agora já podemos começar a criar as tabelas e manipular nossas informações:</p>
+            <p class="fonte">3 - Criando nossa tabela base</p>
+            <p>- Neste curso iremos utilizar apenas uma tabela, que terá o nome de funcionario.<br />
+                - Lembrando que os nomes de tabelas e campos <strong>não podem conter acentuação, espaços ou caracteres especiais.</strong></p>
+            <p><strong>Modelo da Tabela:</strong></p>
+            <p><img src="imagens/aula01-04.PNG" width="174" height="155" /></p>
+            <p>- Para criarmos a tabela acima devemos digitar o comando abaixo no Terminal Mysql, confira corretamente as vírgulas e parênteses. <br />
+                - Digite tudo na sequência, não precisa pular linha, a quebra é automática.<br />
+                - Caso você feche o terminal, nada é perdido, você precisa somente acessar o BD novamente através do comando <span class="comandos">use</span>. </p>
+            <p><strong>Comando: </strong><br />
+                <span class="comandos"> CREATE TABLE funcionarios  (id int key auto_increment, nome varchar(60), email varchar(60), salario float(10,2), data_nascimento date, cidade varchar(60), estado varchar(2));</span></p>
+            <p><img src="imagens/aula01-05.PNG" width="673" height="341" /></p>
+            <p><span class="fonte">3 - Listando e Visualizado a Estrutura da tabela:</span></p>
+            <p>- Para listar as tabelas existentes no BD devemos utilizar o comando: <span class="comandos">show tables;</span><br />
+                - Para verificar os campos e a estrutura da tabela, devemos utilizar o comando Describe ou somente DESC: <strong class="comandos">desc funcionarios; </strong></p>
+            <p><img src="imagens/aula01-06.PNG" width="688" height="335" /></p>
+            <p class="comandos">- Temos que ter muita atenção ao nome do campo e ao tipo de cada campo, pois será essencial para nosso aprendizado.</p>
+
+        </div>
+
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>

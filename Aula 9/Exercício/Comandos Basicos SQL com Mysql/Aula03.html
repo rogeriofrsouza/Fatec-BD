@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Comandos Básicos SQL</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">MySQL - básico |</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="index.html">Página Inicial</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Aula01.html">Aula 1</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Aula02.html">Aula 2</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Aula03.html">Aula 3</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Aula04.html">Aula 4</a>
+                        </li>                       
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="Atividade.html">Atividade</a>
+                        </li> 
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container mt-5">
+            <p class="fonte">1 - Comandos Básicos com SELECT </p>
+            <p>- O  Select é um comando utilizado para listar os registros de uma tabela<br />
+            </p>
+            <p>- 
+                Para listar<span class="fonte"> todos os registros </span>da tabela devemos utilizar a seguinte sintaxe:</p>
+            <p class="comandos">SELECT * FROM funcionarios;</p>
+            <p><img src="imagens/aula03-01.PNG" width="691" height="362" /></p>
+            <p><br />
+                - Observe que o comando nos retornou 8 registros, que são os que forãm inseridos na aula 02.<br />
+                - Este Terminal não pode ser expandido, portanto algumas colunas podem quebrar para a linha de baixo.<br />
+                - O <strong>asterisco <span class="fonte">*</span></strong> é utilizado quando queremos listar todos os campos da tabela, ele pode ser substituído pelo nome de um ou vários campos.</p>
+            <p class="fonte">&nbsp;</p>
+            <p class="fonte">2 - Listando campos específicos da tabela</p>
+            <p>- Para listar determinando campos de uma tabela, você deve substituir o <span class="comandos">*</span> por um ou mais campos separados por vírgula.</p>
+            <p><strong>Exemplo:</strong></p>
+            <p><br />
+                <span class="comandos">Select nome, email from funcionarios;</span></p>
+            <p> <img src="imagens/aula03-02.PNG" width="686" height="364" /><br />
+            </p>
+            <p>- No exemplo acima ao invés de listarmos todos os campos com o *, listamos apenas os campos nome e email.<br />
+                - Este comando é importante quando temos tabelas com muitos campos.<br />
+                - <span class="comandos">Treine </span>listando apenas determinados campos como: <strong>Nome e Salário</strong> , <strong>Nome - Cidade e Estado</strong>, <strong>ID -Nome e Data de Nascimento </strong></p>
+            <p>&nbsp;</p>
+            <p class="fonte">3 - Utilizando a cláusula Where com Operadores Relacionais:</p>
+            <p>- A clausula <span class="cor">WHERE</span> nos permite refinar ou filtrar um determinado comando SQL</p>
+            <p><img src="imagens/relacional.JPG" width="398" height="194" /></p>
+            <p><strong>Exemplo 1:</strong> Listar nome e salário dos Funcionários que ganham menos de 4000.<br />
+                <span class="comandos"> Select nome, salario from funcionarios where salario &lt; 4000;</span></p>
+            <p><strong>Exemplo 2:</strong> Listar nome e salário dos Funcionários que ganham igual a 10000.<br />
+                <span class="comandos"> Select nome, salario from funcionarios where salario = 10000;</span></p>
+            <p><strong>Exemplo 3:</strong> Listar nome, salário e estado dos Funcionários do estado de SP;<br />
+                <span class="comandos"> Select nome, salario, estado from funcionarios where estado='SP';</span></p>
+            <p>&nbsp;</p>
+            <p><strong class="comandos">- Atenção novamente ao uso das aspas nos campos.</strong><br />
+                <strong>Campo salario</strong> do tipo Float: sem aspas<br />
+                <strong>Campo estado</strong> do tipo Varchar: com aspas </p>
+            <p class="cor">- Treine digitando os exemplos acima.</p>
+            <p>&nbsp;</p>
+            <p><span class="fonte">4 - Utilizando a cláusula Where com Operadores Relacionais e Lógicos</span></p>
+            <p>- operador Lógico <strong class="cor">AND</strong><br />
+                - Retorna <span class="comandos">TRUE</span> se todas as condições forem verdadeiras.</p>
+            <p><strong>Exemplo 1:</strong><span class="comandos"> Select * from funcionarios where salario = 1000 </span><span class="cor">and</span><span class="comandos"> estado = 'SP';</span><br />
+            </p>
+            <p>- a sintaxe acima só irá retornar um resultado somente <span class="fonte">se as duas comparações forem verdadeiras.</span></p>
+            <p><img src="imagens/aula03-03.PNG" width="671" height="106" /></p>
+            <p>- Observe que ele retornou Empty set (vazio), o que siginifica que umas das condições de comparação é falsa.</p>
+            <p>&nbsp;</p>
+            <p><strong>- Observe agora o mesmo exemplo utilizando o operador OR</strong></p>
+            <p>- operador Lógico <strong class="cor">Or</strong><br />
+                - Retorna <span class="comandos">TRUE</span> se uma das condições forem verdadeiras.</p>
+            <p><strong>Exemplo 1:</strong><span class="comandos"> Select * from funcionarios where salario = 1000 </span><span class="cor">or</span><span class="comandos"> estado = 'SP';</span><br />
+            </p>
+            <p>- a sintaxe acima  irá retornar um resultado  <span class="fonte">caso uma das comparações seja verdadeira.</span></p>
+            <p><img src="imagens/aula03-04.PNG" width="671" height="361" /></p>
+            <p>- Observe que ele retornou 4 registros, nenhum registro possui o salário igual a 1000, mas todos são do estado de SP, isso devido a uma comparação ser verdadeira, o que já satisfaz o operador <span class="comandos">OR.</span></p>
+            <p>&nbsp;</p>
+            <p><span class="fonte">Outros Exemplos:</span><br />
+                <br />
+                <strong>Exemplo1:</strong> Listar nome, salario, cidade e estado dos funcionários do estado de SP que ganhem mais de 5000 e tenham nascido antes de 1980.<br />
+                <span class="comandos">Select nome, salario, cidade, estado from funcionarios where estado='SP' and salario &gt; 5000 and data_nascimento &lt; '1980-01-01'; </span></p>
+            <p><strong>Exemplo2:</strong> Listar nome,  cidade e estado dos funcionários do estado de SP e MG<br />
+                <span class="comandos">Select nome,  cidade, estado from funcionarios where estado='SP' or estado='MG';</span></p>
+            <p><img src="imagens/aula03-05.PNG" width="670" height="361" /></p>
+            <p>&nbsp;</p>
+            <p><span class="fonte">5 - Utilizando a cláusula Where com Between</span></p>
+            <p>- O <strong class="cor">Between</strong> é utilizado sempre que precisamos listar registros que obedeçam um certo intervado, que estejam <span class="comandos">entre</span> dois valores.</p>
+            <p><strong>Exemplos: </strong></p>
+            <p><br />
+                - 
+                Listar nome e salário dos funcionarios que ganhem entre 5000 e 10000</p>
+            <p><span class="comandos">Select nome, salario from funcionarios where </span><span class="cor">salario Between </span><span class="comandos">5000 and 10000;</span></p>
+            <p><img src="imagens/aula03-06.PNG" width="651" height="123" /></p>
+            <p>- 
+                Listar os funcionarios de id entre 4 e 7<br />
+                <span class="comandos">Select * from funcionarios where </span><span class="cor">id Between</span><span class="comandos"> 4 and 7;</span></p>
+            <p>- 
+                Listar os funcionarios que nasceram entre 1980 e 1990<br />
+                <span class="comandos">Select * from funcionarios where </span><span class="cor">data_nascimento Between</span> <span class="comandos">'1980-01-01' and '1990-12-31';</span></p>
+            <p>- Observe que tempo que utilizar a data no formato completo: Ano-Mês-Dia</p>
+            <p>&nbsp;</p>
+            <p><span class="fonte">5 - Utilizando Order By</span></p>
+            <p>- O  <span class="comandos">Order By</span> é utilizado para ordenar o resultado de uma consulta, deve sempre ser aplicado a um determinado <strong>campo.</strong></p>
+            <p>- Por exemplo, para ordenarmos o salário do menor para o maior, chamamos de Ascendente.</p>
+            <p><span class="comandos">SELECT nome, salario from funcionarios ORDER BY salario;</span></p>
+            <p><img src="imagens/aula03-07.PNG" width="674" height="255" /><br />
+            </p>
+            <p><br />
+                - Para ordenarmos do maior para o menor chamamos de <strong>Descendente</strong> ou como devemos utilizar na sintaxe <strong>DESC.</strong></p>
+            <p><span class="comandos">SELECT nome, salario from funcionarios ORDER BY salario </span><span class="cor">DESC</span><span class="comandos">;</span></p>
+            <p><img src="imagens/aula03-08.PNG" width="671" height="240" /></p>
+            <p><span class="comandos">DICA: </span><strong>o Order by sempre deve ser utilizado no final da sintaxe, funciona tanto para númetos como para textos.</strong></p>
+            <p>&nbsp;</p>
+            <p><strong class="fonte">6 - Funções de Agregação: SUM, MAX, MIN,  AVG e COUNT</strong></p>
+            <p>- São funções SQL que permitem executar uma   operação aritmética nos valores de uma coluna em todos os registros de   uma tabela.<br />
+                - 
+                Retornam um valor único baseado em um conjunto de valores.<br />
+                - As funções de agregação devem ser aplicadas a um derteminado campo antes do FROM.<br />
+                - Você pode utilizar com elas todos os filtros aprendidos com a clausula Where.<br />
+                - Através do operador <span class="comandos">AS</span> você pode atribuir um apelido para a Função. </p>
+            <p class="fonte">Exemplos:</p>
+            <p><br />
+                <span class="cor">SUM</span><span class="comandos"> - </span>utilizado para somar os valores de uma determinada coluna:</p>
+            <p><span class="comandos">SELECT SUM(salario) as Soma FROM funcionarios;</span></p>
+            <p><img src="imagens/aula03-09.PNG" width="674" height="183" /></p>
+            <p>- No exemplo acima ele somou todos os salarios dos funcionários.</p>
+            <p>&nbsp;</p>
+            <p><span class="cor">MAX</span><span class="comandos"> - </span>utilizado para listar o Valor Máximo de um conjunto de valores</p>
+            <p><span class="comandos">SELECT MAX(salario) as Maior_Salario FROM funcionarios;</span></p>
+            <p><img src="imagens/aula03-10.PNG" width="671" height="184" /></p>
+            <p>- No exemplo acima ele retornou o maior salário </p>
+            <p><br />
+            </p>
+            <p><span class="cor">MIN</span><span class="comandos"> - </span>utilizado para listar o Valor Mínimo de um conjunto de valores</p>
+            <p><span class="comandos">SELECT MIN(salario) as Menor_Salario FROM funcionarios;</span></p>
+            <p><img src="imagens/aula03-11.PNG" width="673" height="181" /></p>
+            <p>- No exemplo acima ele retornou o menor salário </p>
+            <p>&nbsp;</p>
+            <p><span class="cor">AVG</span><span class="comandos"> - </span>utilizado para calcular a Média Aritmética de um conjunto de valores</p>
+            <p><span class="comandos">SELECT AVG(salario) as Media FROM funcionarios;</span></p>
+            <p><img src="imagens/aula03-12.PNG" width="674" height="182" /></p>
+            <p>- No exemplo acima ele retornou a média de todos os salários</p>
+            <p>&nbsp;</p>
+            <p><span class="cor">COUNT</span><span class="comandos"> - </span>utilizado para contar os registros em uma tabela.</p>
+            <p><span class="comandos">SELECT COUNT(*) as Total FROM funcionarios;</span></p>
+            <p><img src="imagens/aula03-13.PNG" width="674" height="183" /></p>
+            <p><br />
+                <br />
+            </p>
+        </div>
+
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
